@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: hong-yeon
+server:
+  port: 8020
