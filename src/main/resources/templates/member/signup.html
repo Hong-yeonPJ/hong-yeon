@@ -3,8 +3,8 @@
     <div class="border-bottom mb-4">
         <h4>회원가입</h4>
     </div>
-
     <form th:action="@{/member/signup}" th:object="${memberDto}" method="post">
+
         <div class="mb-3">
             <label for="username" class="form-label">ID</label>
             <input type="text" th:field="*{username}" class="form-control" placeholder="아이디를 입력하세요">
