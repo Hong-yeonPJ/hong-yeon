@@ -2,6 +2,7 @@ package com.hy.hongyeon.member.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import com.hy.hongyeon.member.entity.MemberRole;
 import com.hy.hongyeon.member.entity.MemberType;
@@ -34,7 +35,7 @@ public class MemberDto {
     @NotEmpty(message = "휴대폰 번호는 필수항목입니다.")
     private String phoneNumber;
 
-    @NotEmpty(message = "생년월일은 필수항목입니다.")
+    @NotNull(message = "생년월일은 필수항목입니다.")
     private LocalDate birthday;
 
     private MemberType memberType; // Enum 타입
