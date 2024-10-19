@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Setter
 public class MemberDto {
     @Size(min = 5, max = 25)
-    @NotEmpty(message = "사용자ID는 필수항목입니다.")
+    @NotEmpty(message = "ID는 필수항목입니다.")
     private String username;
 
     @NotEmpty(message = "이메일은 필수항목입니다.")

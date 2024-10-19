@@ -38,4 +38,9 @@ public class MemberController {
 
         return "redirect:/";
     }
+
+    @GetMapping("/signin")
+    public String signin(){
+        return "member/signin";
+    }
 }
