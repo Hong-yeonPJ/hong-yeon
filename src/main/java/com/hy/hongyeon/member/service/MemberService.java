@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 public class MemberService {
@@ -29,6 +30,7 @@ public class MemberService {
         // Member 객체 생성
         Member newMember = Member.builder()
                 .username(username)
+                .createDate(LocalDateTime.now())
                 .email(email)
                 .password(passwordEncoder.encode(password))
                 .name(name)
