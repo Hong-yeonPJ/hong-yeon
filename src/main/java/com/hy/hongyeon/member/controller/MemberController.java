@@ -34,10 +34,14 @@ public class MemberController {
             return "member/signup";
         }
 
-        //if(memberDto.getMemberRole() == "")
 
         memberService.createMember(memberDto.getUsername(), memberDto.getEmail(), memberDto.getPassword(), memberDto.getName(), memberDto.getPhoneNumber(), memberDto.getBirthday(), MemberType.valueOf("NON_CERTIFIED"), memberDto.getMemberRole());
 
         return "redirect:/";
+    }
+
+    @GetMapping("/signin")
+    public String signin(){
+        return "member/signin";
     }
 }

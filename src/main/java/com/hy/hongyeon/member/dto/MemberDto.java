@@ -2,6 +2,7 @@ package com.hy.hongyeon.member.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import com.hy.hongyeon.member.entity.MemberRole;
 import com.hy.hongyeon.member.entity.MemberType;
@@ -13,8 +14,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class MemberDto {
-    @Size(min = 5, max = 25)
-    @NotEmpty(message = "사용자ID는 필수항목입니다.")
+    @Size(min = 5, max = 25, message = "ID는 5자 이상 25자 이하로 입력해야 합니다.")
+    @NotEmpty(message = "ID는 필수항목입니다.")
     private String username;
 
     @NotEmpty(message = "이메일은 필수항목입니다.")
@@ -22,7 +23,7 @@ public class MemberDto {
     private String email;
 
     @NotEmpty(message = "비밀번호는 필수항목입니다.")
-    @Size(min = 8, max = 16, message = "비밀번호는 8 과 16 자 사이어야 합니다.")
+    @Size(min = 8, max = 16, message = "비밀번호는 8자 이상 16자 이하로 입력해야 합니다.")
     private String password;
 
     @NotEmpty(message = "비밀번호 확인은 필수항목입니다.")
@@ -34,7 +35,7 @@ public class MemberDto {
     @NotEmpty(message = "휴대폰 번호는 필수항목입니다.")
     private String phoneNumber;
 
-    @NotEmpty(message = "생년월일은 필수항목입니다.")
+    @NotNull(message = "생년월일은 필수항목입니다.")
     private LocalDate birthday;
 
     private MemberType memberType; // Enum 타입
