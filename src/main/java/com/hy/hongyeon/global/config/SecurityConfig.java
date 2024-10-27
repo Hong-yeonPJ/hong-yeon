@@ -1,4 +1,4 @@
-package com.hy.hongyeon.global.Config;
+package com.hy.hongyeon.global.config;
 
 
 import org.springframework.context.annotation.Bean;
