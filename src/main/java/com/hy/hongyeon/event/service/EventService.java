@@ -3,14 +3,15 @@ package com.hy.hongyeon.event.service;
 import com.hy.hongyeon.event.dto.EventDto;
 import com.hy.hongyeon.event.entity.Event;
 import com.hy.hongyeon.event.repository.EventRepository;
+import com.hy.hongyeon.global.exception.DataNotFoundException;
 import com.hy.hongyeon.global.image.entity.Image;
 import com.hy.hongyeon.global.image.service.ImageService;
-import com.hy.hongyeon.member.entity.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class EventService {
@@ -25,7 +26,8 @@ public class EventService {
     }
 
     @Transactional
-    public Event createEvent(EventDto eventDto, Member writer){
+    //public Event createEvent(EventDto eventDto, Member writer){
+    public Event createEvent(EventDto eventDto){
 
         Image header = imageService.uploadImage(eventDto.getHeader());
         Image detail = imageService.uploadImage(eventDto.getDetail());
@@ -33,15 +35,24 @@ public class EventService {
         Event newEvent = Event.builder().
                 createDate(LocalDateTime.now()).
                 title(eventDto.getTitle()).
-                writer(writer).
+                //writer(writer).
                 eventCategory(eventDto.getEventCategory()).
                 eventStatus(eventDto.getEventStatus()).
                 entranceFee(eventDto.getEntranceFee()).
-                eventOpenDate(eventDto.getEventOpenDate()).
-                headerImage(header).
-                detailImage(detail).
+                //eventOpenDate(eventDto.getEventOpenDate()).
+                header(header).
+                detail(detail).
                 build();
 
         return eventRepository.save(newEvent);
+    }
+
+    public Event getEvent(Long id){
+        Optional<Event> event = this.eventRepository.findById(id);
+        if (event.isPresent()) {
+            return event.get();
+        } else {
+            throw new DataNotFoundException("event not found");
+        }
     }
 }

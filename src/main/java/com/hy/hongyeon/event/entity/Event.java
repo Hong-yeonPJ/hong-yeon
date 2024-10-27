@@ -41,8 +41,8 @@ public class Event {
     private LocalDateTime eventOpenDate;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private Image headerImage;
+    private Image header;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private Image detailImage;
+    private Image detail;
 }

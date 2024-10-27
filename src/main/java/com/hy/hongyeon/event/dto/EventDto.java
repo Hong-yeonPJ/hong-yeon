@@ -9,19 +9,17 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 public class EventDto {
     @NotEmpty(message = "제목은 필수항목입니다.")
     private String title;
 
-    @NotEmpty(message = "헤더 이미지는 필수항목입니다.")
+    @NotNull(message = "헤더 이미지는 필수항목입니다.")
     private MultipartFile header;
 
-    @NotEmpty(message = "상세설명 이미지는 필수항목입니다.")
-    private  MultipartFile detail ;
+    @NotNull(message = "상세설명 이미지는 필수항목입니다.")
+    private MultipartFile detail;
 
     private EventCategory eventCategory;
 
@@ -31,6 +29,6 @@ public class EventDto {
 
     private EventStatus eventStatus;
 
-    @NotNull(message = "예매 오픈 일시는 필수항목입니다.")
-    private LocalDateTime eventOpenDate;
+    //@NotNull(message = "예매 오픈 일시는 필수항목입니다.")
+    //private LocalDateTime eventOpenDate;
 }
