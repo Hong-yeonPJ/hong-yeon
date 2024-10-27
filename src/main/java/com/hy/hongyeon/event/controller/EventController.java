@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
@@ -26,13 +27,13 @@ public class EventController {
 
     @GetMapping("/register")
     public String register(EventDto eventDto){
-        return "event/register";
+        return "event/event_register";
     }
 
     @PostMapping("/register")
     public String register(@Valid EventDto eventDto, BindingResult bindingResult, Principal principal){
         if(bindingResult.hasErrors()){
-            return "event/register";
+            return "event/event_register";
         }
 
         Event event = eventService.createEvent(eventDto);
@@ -46,6 +47,14 @@ public class EventController {
         Event event = this.eventService.getEvent(id);
         model.addAttribute("event", event);
 
-        return "event/detail";
+        return "event/event_detail";
+    }
+
+    @GetMapping("/list")
+    public String list(Model model) {
+        List<Event> eventList = this.eventService.findAll();
+        model.addAttribute("eventList", eventList);
+
+        return "event/event_list";
     }
 }
