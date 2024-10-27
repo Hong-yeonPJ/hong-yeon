@@ -1,4 +1,4 @@
-package com.hy.hongyeon.global.entity;
+package com.hy.hongyeon.global.image.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

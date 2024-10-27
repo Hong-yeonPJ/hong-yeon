@@ -1,6 +1,6 @@
 package com.hy.hongyeon.event.entity;
 
-import com.hy.hongyeon.global.entity.Image;
+import com.hy.hongyeon.global.image.entity.Image;
 import com.hy.hongyeon.member.entity.Member;
 import jakarta.persistence.*;
 import lombok.*;
