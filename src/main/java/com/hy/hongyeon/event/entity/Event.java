@@ -31,10 +31,10 @@ public class Event {
     private Member writer;
 
     @Enumerated(EnumType.STRING)
-    private EventCategory category;
+    private EventCategory eventCategory;
 
     @Enumerated(EnumType.STRING)
-    private EventStatus status;
+    private EventStatus eventStatus;
 
     private int entranceFee;
 

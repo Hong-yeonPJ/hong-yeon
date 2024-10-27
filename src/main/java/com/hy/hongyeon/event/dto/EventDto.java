@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -32,5 +32,5 @@ public class EventDto {
     private EventStatus eventStatus;
 
     @NotNull(message = "예매 오픈 일시는 필수항목입니다.")
-    private LocalDate eventOpenDate;
+    private LocalDateTime eventOpenDate;
 }

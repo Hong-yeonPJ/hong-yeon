@@ -1,5 +1,6 @@
 package com.hy.hongyeon.member.service;
 
+import com.hy.hongyeon.global.exception.DataNotFoundException;
 import com.hy.hongyeon.member.entity.Member;
 import com.hy.hongyeon.member.entity.MemberRole;
 import com.hy.hongyeon.member.entity.MemberType;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class MemberService {
@@ -42,5 +44,14 @@ public class MemberService {
 
         // Member 객체 저장
         return memberRepository.save(newMember);
+    }
+
+    public Member getMember(String username){
+        Optional<Member> member = this.memberRepository.findByUsername(username);
+        if(member.isPresent()){
+            return member.get();
+        } else {
+            throw new DataNotFoundException("member not found");
+        }
     }
 }
