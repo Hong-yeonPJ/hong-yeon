@@ -1,0 +1,386 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+h1 {
+    font-family: 'Consolas', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contents1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+
+.contents2 {
+    font-size: 18px;
+}
+
+.contents3 {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.contents1_bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.result {
+    font-size: 24px;
+}
+
+.intro_bg {
+    background-image: url("image/performance.jpg");
+    width: 100%;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.header {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    height: 86px;
+}
+
+.searchArea {
+    width: 300px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-top: 24px;
+}
+
+.searchArea > form > input {
+    border: none;
+    width: 250px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    padding-left: 10px;
+}
+
+.searchArea > form > span {
+    width: 50px;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(1280px - 300px);
+    line-height: 86px;
+}
+
+.nav > li {
+    margin-left: 84px;
+}
+
+.nav > li > a {
+    color: #fff;
+}
+
+.amount {
+    position: relative;
+    top: -66px;
+    display: flex;
+    width: 1280px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.amount > li {
+    flex: 1;
+    height: 132px;
+}
+
+.amount > li > div {
+    text-align: center;
+    margin-top: 37px;
+}
+
+.amount > li:not(:last-child) > div {
+    border-right: 1px solid #E1E1E1;
+}
+
+.intro_text {
+    width: 100%;
+    margin: 231px auto;
+    text-align: center;
+}
+
+.intro_text > h1,
+.intro_text > h4 {
+    color: #fff;
+}
+
+.main_text0 {
+    width: 100%;
+    height: 601px;
+    margin-top: -132px;
+    background: #f1f2f3;
+}
+
+.main_text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+}
+
+.main_text0 > .contents1 {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    width: 1280px;
+    height: 302px;
+    margin: auto;
+}
+
+.icons > li {
+    flex: 1;
+    background: white;
+    margin-top: 49px;
+    height: 302px;
+    text-align: center;
+}
+
+.icons > li > .icon_img {
+    margin-top: 18px;
+}
+
+.icons > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.icons .contents2 {
+    width: 280px;
+    margin: auto;
+    letter-spacing: -1px;
+}
+
+.more {
+    width: 100px;
+    height: 30px;
+    background: #2F7AF4;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 25px auto;
+}
+
+.main_text1 {
+    width: 100%;
+    height: 659px;
+}
+
+.main_text1 > h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.main_text1 > .contents1 {
+    text-align: center;
+}
+
+.service {
+    width: 1280px;
+    display: flex;
+    margin: 49px auto;
+    height: 427px;
+}
+
+.service > .contents2 {
+    padding: 20px;
+}
+
+.service > .contents2 > h2 {
+    margin-bottom: 27px;
+}
+
+.main_text2 {
+    width: 100%;
+    height: 418px;
+    background-image: url("../../static/image/contact.png");
+}
+
+.main_text2 > ul {
+    display: flex;
+    padding-top: 138px;
+}
+
+.main_text2 > ul > li {
+    flex: 1;
+    text-align: center;
+}
+
+.main_text2 > ul > li > div,
+.main_text2 > ul > li > div > h1 {
+    color: #fff;
+}
+
+.more2 {
+    width: 220px;
+    height: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 16px auto;
+}
+
+.footer {
+    display: flex;
+    background: #1f1f1f;
+    padding: 30px;
+}
+
+.footer > div:first-child {
+    flex: 3;
+    text-align: center;
+    color: #fff;
+}
+
+.footer > div:last-child {
+    flex: 9;
+    color: #fff;
+}
+
+.performance-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+* {
+    box-sizing: border-box; /* 모든 요소의 box-sizing을 border-box로 설정 */
+    margin: 0;
+    padding: 0;
+}
+.performance-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    flex: 0 1 calc(33.33% - 20px); /* 카드 너비 */
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.performance-title {
+    font-family: Consolas, monospace;
+}
+
+.performance-item:nth-child(3n) {
+    border-right: none;
+}
+
+.card-img-top {
+    width: 100%; /* 카드 이미지 너비 100% */
+    height: 300px; /* 카드 이미지 높이 고정 */
+    object-fit: cover; /* 비율 유지하며 잘림 */
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+}
+
+/* 카드 내 텍스트 스타일링 */
+.card-body {
+    padding: 15px; /* 카드 본문 패딩 */
+
+}
+
+.card-title {
+    font-size: 18px; /* 제목 폰트 크기 */
+    margin: 10px 0; /* 제목 마진 */
+}
+
+/* style.css */
+
+body {
+    background-image: url('image/november.png'); /* 배경 이미지 경로 */
+    background-size: cover; /* 화면을 가득 채우도록 설정 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    background-attachment: fixed; /* 스크롤 시 배경 고정 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    background-color: rgba(255, 255, 255, 0.5); /* 배경색을 반투명하게 설정 (예: 흰색, 50% 투명) */
+}
+
+
+
+.swipe-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.swipe-content {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.main_text0 {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+
+.icons li {
+    text-align: center;
+    flex: 1;
+}
+
+.icon_img img {
+    width: 50px;
+    height: auto;
+}
+
+.contents1_bold {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contents2 {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.more {
+    margin-top: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.header,
+.footer {
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .swipe-content {
+        flex-direction: column;
+    }
+
+    .main_text0 {
+        min-width: 100%;
+    }
+}

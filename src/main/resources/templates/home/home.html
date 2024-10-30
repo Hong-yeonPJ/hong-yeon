@@ -1,5 +1,108 @@
-<html layout:decorate="~{global/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<div layout:fragment="content" class="container my-3">
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"> <!-- 인코딩 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"> <!-- Custom CSS -->
 
+
+    <title>홍연 예매 시스템</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">홍연 예매 시스템</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/member/signin}">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/member/signup}">회원가입</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">문의하기</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container my-5">
+    <h1>환영합니다!</h1>
+    <p>여기는 홍연 예매 시스템입니다. 다양한 공연을 예약하고 즐기세요.</p>
+
+    <h2>추천 공연</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/image/performance1.png" class="card-img-top" alt="Performance 1">>
+                <div class="card-body">
+                    <h5 class="card-title">뮤지컬</h5>
+                    <p class="card-text">스포트라이트</p>
+                    <p class="card-text">일시 - 2024년 12월 31일</p>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/image/performance2.png" class="card-img-top" alt="Performance 2">>
+                <div class="card-body">
+                    <h5 class="card-title">공연 2</h5>
+                    <p class="card-text">공연 2에 대한 간단한 설명입니다.</p>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/image/hongik.png" class="card-img-top" alt="Performance 3">>
+                <div class="card-body">
+                    <h5 class="card-title">공연 3</h5>
+                    <p class="card-text">공연 3에 대한 간단한 설명입니다.</p>
+                    <a href="#" class="btn btn-primary">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-4">About Us</h2>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">특별한 공연!</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/image/live.jpg" alt="About Us Image" class="img-fluid performance-poster"
+                         style="max-width: 80%; height: auto;"> <!-- 여기서도 height를 설정할 필요 없음 -->
+                </div>
+                <div class="col-md-6">
+                    <p class="card-text">
+                        우리의 특별한 공연에 초대합니다!<br>
+                        함께하는 이 순간, 감동과 즐거움이 가득한 무대에서 잊지 못할 추억을 만들어보세요.<br>
+                        다양한 장르의 공연이 여러분을 기다립니다.<br>
+                        지금 바로 예매하고, 행복한 시간을 만끽하세요!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center mt-4">2024</h1>
+
+    <footer class="bg-light text-center py-3">
+        <div>
+            <p>Copyright © 2024 홍연 예매 시스템. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script th:src="@{/bootstrap.min.js}"></script> <!-- Bootstrap JS -->
 </div>
-</html>

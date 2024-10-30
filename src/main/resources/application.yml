@@ -16,5 +16,9 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
 server:
   port: 8020

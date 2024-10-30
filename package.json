@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "install": "^0.13.0"
+  },
+  "name": "exit",
+  "version": "1.0.0",
+  "description": "echo \"# JHongik2\" >> README.md",
+  "main": "git init",
+  "devDependencies": {},
+  "scripts": {
+    "test": "git add README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git commit -m \"first commit\""
+  },
+  "keywords": [
+    "git",
+    "branch",
+    "-M",
+    "main"
+  ],
+  "author": "git remote add origin https://github.com/Hong-yeonPJ/JHongik2.git",
+  "license": "ISC"
+}
