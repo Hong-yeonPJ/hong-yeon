@@ -21,6 +21,7 @@ h1 {
     font-weight: lighter;
 }
 
+
 .contents2 {
     font-size: 18px;
 }
@@ -40,7 +41,7 @@ h1 {
 }
 
 .intro_bg {
-    background-image: url("../../static/image/performance1.jpg");
+    background-image: url("image/performance.jpg");
     width: 100%;
     background-position: center;
     height: 400px;
@@ -263,12 +264,17 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+* {
+    box-sizing: border-box; /* 모든 요소의 box-sizing을 border-box로 설정 */
+    margin: 0;
+    padding: 0;
+}
 .performance-item {
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
-    width: calc(33.33% - 20px);
+    flex: 0 1 calc(33.33% - 20px); /* 카드 너비 */
+    max-width: calc(33.33% - 20px);
     box-sizing: border-box;
     text-align: center;
 }
@@ -281,18 +287,36 @@ h1 {
     border-right: none;
 }
 
-.performance-poster {
-    width: 100% !important;
-    height: 300px !important;
-    object-fit: cover !important;
-    border-radius: 10px;
+.card-img-top {
+    width: 100%; /* 카드 이미지 너비 100% */
+    height: 300px; /* 카드 이미지 높이 고정 */
+    object-fit: cover; /* 비율 유지하며 잘림 */
+    border-radius: 10px; /* 모서리 둥글게 처리 */
 }
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    margin: 0;
-    padding: 0;
+/* 카드 내 텍스트 스타일링 */
+.card-body {
+    padding: 15px; /* 카드 본문 패딩 */
+
 }
+
+.card-title {
+    font-size: 18px; /* 제목 폰트 크기 */
+    margin: 10px 0; /* 제목 마진 */
+}
+
+/* style.css */
+
+body {
+    background-image: url('image/november.png'); /* 배경 이미지 경로 */
+    background-size: cover; /* 화면을 가득 채우도록 설정 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    background-attachment: fixed; /* 스크롤 시 배경 고정 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    background-color: rgba(255, 255, 255, 0.5); /* 배경색을 반투명하게 설정 (예: 흰색, 50% 투명) */
+}
+
+
 
 .swipe-container {
     overflow: hidden;
