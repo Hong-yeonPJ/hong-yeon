@@ -1,0 +1,23 @@
+.navbar-nav {
+    margin-top: 0; /* 내비게이션 항목의 상단 마진을 제거합니다. */
+    margin-left: auto; /* 오른쪽 정렬 */
+}
+
+.navbar-nav .nav-link {
+    line-height: 1; /* 줄 높이를 줄여서 더 위로 올리기 */
+    padding-top: 5px; /* 각 내비게이션 링크의 상단 패딩을 조정합니다. */
+    padding-bottom: 5px; /* 각 내비게이션 링크의 하단 패딩을 조정합니다. */
+    padding-right: 30px;
+
+    color: black; /* 글씨 색상 설정 */
+}
+
+.navbar-collapse {
+    margin-right: 100px; /* 원하는 만큼 왼쪽으로 이동 */
+}
+
+
+.header-left {
+    margin-top: 10px; /* 원하는 만큼 아래로 내리기 */
+    margin-left: 100px; /* 원하는 만큼 오른쪽으로 이동 */
+}
