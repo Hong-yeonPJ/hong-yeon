@@ -266,3 +266,6 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/yw010/s
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 61 more
+2024-10-28 03:21:27.683652+09:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE [*]* FROM EVENT WHERE EVENT_ID=1"; expected "identifier"; SQL statement:
+DELETE * FROM EVENT WHERE EVENT_ID=1 [42001-224]
