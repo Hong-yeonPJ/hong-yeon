@@ -1,0 +1,7 @@
+.carousel {
+    max-width: 600px; /* 캐러셀 최대 너비 설정 */
+    margin: auto; /* 수평 중앙 정렬 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
