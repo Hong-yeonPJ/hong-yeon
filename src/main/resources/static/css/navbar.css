@@ -21,3 +21,32 @@
     margin-top: 10px; /* 원하는 만큼 아래로 내리기 */
     margin-left: 100px; /* 원하는 만큼 오른쪽으로 이동 */
 }
+
+.sub-navbar {
+    border-top: 2px solid #ddd; /* 상단 경계선 추가 */
+    border-bottom: 2px solid #ddd; /* 하단 경계선 추가 */
+    padding: 10px 0; /* 여백 설정 */
+}
+
+.sub-navbar-links {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: left; /* 중앙 정렬 */
+    margin-left: 100px; /* 원하는 만큼 왼쪽으로 이동 */
+}
+
+.sub-nav-item {
+    margin: 0 30px; /* 각 항목 간의 간격 설정 */
+}
+
+.sub-nav-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #000000; /* 링크 색상 설정 */
+    font-weight: bold; /* 글씨를 굵게 설정 */
+}
+
+.sub-nav-link:hover {
+    color: #e00000;
+}

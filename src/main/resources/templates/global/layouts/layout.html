@@ -14,6 +14,7 @@
 
 <body class="h-screen">
 <th:block th:replace="~{global/layouts/navbar :: navbar}"></th:block>  <!--상단바-->
+<th:block th:replace="~{global/layouts/navbar :: sub-navbar}"></th:block>  <!--상단 메뉴-->
 
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 <th:block layout:fragment="content"></th:block>
