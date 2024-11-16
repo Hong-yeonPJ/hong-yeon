@@ -1,0 +1,48 @@
+<html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org">
+<div layout:fragment="content" class="container my-5"> <!-- 상하 여백을 추가하기 위해 my-5 사용 -->
+    <div class="border-bottom mb-4">
+        <h4>행사등록</h4>
+    </div>
+    <form th:action="@{/event/register}" th:object="${eventDto}" method="post" enctype="multipart/form-data">
+        <div th:replace="~{global/form_errors :: formErrorsFragment}"></div>
+        <div class="mb-3">
+            <label for="title" class="form-label">제목</label>
+            <input type="text" th:field="*{title}" name="title" id="title" class="form-control" placeholder="제목을 입력하세요">
+        </div>
+        <div class="mb-3">
+            <label for="header" class="form-label">헤더 이미지</label>
+            <input type="file" th:field="*{header}" name="header" id="header" class="form-control" placeholder="헤더 이미지를 등록하세요">
+        </div>
+        <div class="mb-3">
+            <label for="detail" class="form-label">상세정보 이미지</label>
+            <input type="file" th:field="*{detail}" name="detail" id="detail" class="form-control" placeholder="공연 상세 정보 이미지를 등록하세요">
+        </div>
+        <div class="mb-3">
+            <label for="eventCategory" class="form-label">카테고리</label>
+            <select th:field="*{eventCategory}" name="eventCategory" id="eventCategory" class="form-control">
+                <option value="" disabled selected>선택하세요</option>
+                <option value="PERFORMANCE">공연</option>
+                <option value="UNIVERSITY_EVENT">학교 행사</option>
+                <option value="PUB">주점</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="entranceFee" class="form-label">입장료</label>
+            <input type="number" th:field="*{entranceFee}" name="entranceFee" id="entranceFee" class="form-control" min="0" placeholder="입장료를 입력하세요">
+        </div>
+        <div class="mb-3">
+            <label for="eventStatus" class="form-label">행사 상태</label>
+            <select th:field="*{eventStatus}" name="eventStatus" id="eventStatus" class="form-control">
+                <option value="" disabled selected>선택하세요</option>
+                <option value="AVAILABLE">예매 가능</option>
+                <option value="NOT_AVAILABLE">예매 불가</option>
+            </select>
+        </div>
+        <!--<div class="mb-3">
+            <label for="eventOpenDate" class="form-label">예매 오픈 일시</label>
+            <input type="date" th:field="*{eventOpenDate}" name="eventOpenDate" id="eventOpenDate" class="form-control">
+        </div>-->
+        <button type="submit" class="btn btn-primary w-100">공연 등록</button> <!-- 버튼을 전체 너비로 설정 -->
+    </form>
+</div>
+</html>

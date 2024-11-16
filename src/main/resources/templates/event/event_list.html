@@ -1,0 +1,22 @@
+<html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<div layout:fragment="content" class="container my-3">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th></th>
+            <th>제목</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="event : ${eventList}">
+            <td>
+                <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
+                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid" style="max-width: 20%;">
+                </a>
+            </td>
+            <td th:text="${event.title}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

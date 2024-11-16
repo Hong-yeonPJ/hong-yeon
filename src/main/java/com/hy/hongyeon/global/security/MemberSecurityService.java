@@ -1,4 +1,4 @@
-package com.hy.hongyeon.global.Security;
+package com.hy.hongyeon.global.security;
 
 import com.hy.hongyeon.member.entity.Member;
 import com.hy.hongyeon.member.entity.MemberRole;

@@ -1,0 +1,38 @@
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light custom-navbar border-bottom">
+    <link rel="stylesheet" href="/css/navbar.css"> <!-- CSS 파일 연결 -->
+    <div class="container-fluid">
+        <div class="header-left">
+            <h1 class="header-title">
+                <a th:href="@{/}">
+                    <img th:src="@{/images/logo.png}" alt="로고" style="height: 70px;">
+                </a>
+            </h1>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- ms-auto 추가 -->
+                <li class="nav-item">
+                    <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/member/signin}">로그인</a>
+                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/member/signout}">로그아웃</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/member/signup}">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 추가 바 -->
+<div th:fragment="sub-navbar" class="sub-navbar">
+    <div class="container-fluid">
+        <ul class="sub-navbar-links">
+            <li class="sub-nav-item"><a class="sub-nav-link" href="#link1">링크 1</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-link" href="#link2">링크 2</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-link" href="#link3">링크 3</a></li>
+        </ul>
+    </div>
+</div>

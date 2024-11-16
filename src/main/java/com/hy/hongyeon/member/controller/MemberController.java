@@ -34,7 +34,6 @@ public class MemberController {
             return "member/signup";
         }
 
-
         memberService.createMember(memberDto.getUsername(), memberDto.getEmail(), memberDto.getPassword(), memberDto.getName(), memberDto.getPhoneNumber(), memberDto.getBirthday(), MemberType.valueOf("NON_CERTIFIED"), memberDto.getMemberRole());
 
         return "redirect:/";
