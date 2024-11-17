@@ -27,6 +27,10 @@
             </select>
         </div>
         <div class="mb-3">
+            <label for="seatCapacity" class="form-label">좌석수</label>
+            <input type="number" th:field="*{seatCapacity}" name="seatCapacity" id="seatCapacity" class="form-control" min="0" placeholder="좌석수를 입력하세요">
+        </div>
+        <div class="mb-3">
             <label for="entranceFee" class="form-label">입장료</label>
             <input type="number" th:field="*{entranceFee}" name="entranceFee" id="entranceFee" class="form-control" min="0" placeholder="입장료를 입력하세요">
         </div>

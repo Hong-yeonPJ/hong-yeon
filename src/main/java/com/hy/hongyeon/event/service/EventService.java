@@ -38,6 +38,7 @@ public class EventService {
                 title(eventDto.getTitle()).
                 //writer(writer).
                 eventCategory(eventDto.getEventCategory()).
+                seatCapacity(eventDto.getSeatCapacity()).
                 eventStatus(eventDto.getEventStatus()).
                 entranceFee(eventDto.getEntranceFee()).
                 //eventOpenDate(eventDto.getEventOpenDate()).

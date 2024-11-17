@@ -36,6 +36,8 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventStatus eventStatus;
 
+    private int seatCapacity;
+
     private int entranceFee;
 
     private LocalDateTime eventOpenDate;
