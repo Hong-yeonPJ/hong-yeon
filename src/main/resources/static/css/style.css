@@ -1,0 +1,16 @@
+.event-register-margin {
+    margin-left: 180px; /* 왼쪽 여백 */
+    margin-right: 180px; /* 오른쪽 여백 */
+}
+
+.event-register-btn {
+    margin-top: 30px;
+    background-color: #c70039; /* 원하는 색상 코드로 변경 */
+    color: white; /* 글자 색상 변경 */
+    border: none; /* 테두리 제거 (선택사항) */
+}
+
+.event-register:hover {
+    background-color: #c70039; /* 마우스 오버 시 색상 변경 */
+}
+

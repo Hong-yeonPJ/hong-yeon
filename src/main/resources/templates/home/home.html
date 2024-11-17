@@ -1,7 +1,7 @@
 <html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <div layout:fragment="content" class="container my-3">
     <link rel="stylesheet" href="/css/home.css"> <!-- CSS 파일 연결 -->
-    <div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4" style="background-color: #ffcccc;">
+    <div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4" style="background-color: #e00000;">
         <div class="carousel-item" th:each="event : ${eventList}">
             <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
                 <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid" style="max-width: 60%;">
