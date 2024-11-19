@@ -1,9 +1,9 @@
 <html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org">
 <div layout:fragment="content" class="container my-5"> <!-- 상하 여백을 추가하기 위해 my-5 사용 -->
     <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
-    <div class="event-register-margin">
+    <div class="event-register-container">
         <div class="border-bottom mb-4">
-            <h4>행사등록</h4>
+            <h4 class="event-register-title">공연 등록</h4>
         </div>
         <form th:action="@{/event/register}" th:object="${eventDto}" method="post" enctype="multipart/form-data">
             <div th:replace="~{global/form_errors :: formErrorsFragment}"></div>
