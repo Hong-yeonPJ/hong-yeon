@@ -40,8 +40,6 @@
     background-color: #c70039; /* 마우스 오버 시 색상 변경 */
 }
 
-
-
 /*이벤트 등록*/
 
 .event-register-title {
@@ -83,4 +81,10 @@
     width: 250px; /* 원하는 너비 */
     height: 350px; /* 원하는 높이 */
     object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
+}
+
+/*이벤트 목록*/
+
+.event-list {
+    margin: 50px;
 }
