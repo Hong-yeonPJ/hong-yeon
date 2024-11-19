@@ -3,7 +3,10 @@
     margin: auto; /* 수평 중앙 정렬 */
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 수평 중앙 정렬 */
+<<<<<<< HEAD
     background-color: #e00000; /* 배경색 */
+=======
+>>>>>>> cf32eaf2c7c1002f4032405e2e71b9493f971908
     padding: 1rem; /* 패딩 */
     margin-top: 30px; /* 위쪽 여백 */
     margin-bottom: 10px; /* 아래쪽 여백 */
@@ -17,4 +20,34 @@
 .carousel img {
     width: 100%; /* 이미지 너비를 100%로 설정 */
     height: auto; /* 비율에 맞게 높이 자동 조정 */
+<<<<<<< HEAD
 }
+=======
+}
+
+.go-event-list {
+    color: #000000; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 20px;
+    font-weight: semibold; /* 글자를 굵게 설정 */
+}
+
+.go-event-list:hover {
+    color: #e00000; /* 호버 시 글자 색 변경 (예: 빨간색) */
+}
+
+
+.event-list-btn {
+    background-color: white; /* 배경색 흰색 */
+    color: #000000; /* 텍스트 색상 */
+    border: 1px solid gray; /* 회색 테두리 */
+    border-radius: 0; /* 각진 모서리 */
+    padding: 5px 20px; /* 여백 조정 */
+    transition: background-color 0.3s; /* 부드러운 전환 효과 */
+
+}
+
+.event-list-btn:hover {
+    background-color: #f8f9fa; /* 호버 시 밝은 회색 배경 */
+}
+>>>>>>> cf32eaf2c7c1002f4032405e2e71b9493f971908

@@ -1,5 +1,6 @@
 <html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <div layout:fragment="content" class="container my-3">
+<<<<<<< HEAD
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -18,5 +19,26 @@
         </tr>
         </tbody>
     </table>
+=======
+    <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
+
+    <div class="container event-list">
+        <h1 class="text-2xl font-bold mb-6">공연 목록</h1>
+        <div class="grid grid-cols-4 gap-4">
+            <div th:each="event : ${eventList}" class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <a th:href="@{/event/detail/{id}(id=${event.eventId})}" class="block">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h2 class="font-bold text-lg line-clamp-2" th:text="${event.title}"></h2>
+                        <p class="text-gray-600">2024.12.28 - 2024.12.29</p>
+                        <p class="text-gray-600">노들섬 라이브하우스</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+>>>>>>> cf32eaf2c7c1002f4032405e2e71b9493f971908
 </div>
 </html>
