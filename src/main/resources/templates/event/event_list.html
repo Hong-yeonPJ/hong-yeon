@@ -1,25 +1,5 @@
 <html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <div layout:fragment="content" class="container my-3">
-<<<<<<< HEAD
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th></th>
-            <th>제목</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="event : ${eventList}">
-            <td>
-                <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
-                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid" style="max-width: 20%;">
-                </a>
-            </td>
-            <td th:text="${event.title}"></td>
-        </tr>
-        </tbody>
-    </table>
-=======
     <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
 
     <div class="container event-list">
@@ -39,6 +19,5 @@
             </div>
         </div>
     </div>
->>>>>>> cf32eaf2c7c1002f4032405e2e71b9493f971908
 </div>
 </html>
