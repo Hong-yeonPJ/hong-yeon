@@ -1,0 +1,86 @@
+/*로그인*/
+
+.signin-container {
+    margin-left: 380px; /* 왼쪽 여백 */
+    margin-right: 380px; /* 오른쪽 여백 */
+}
+
+.signin-btn {
+    margin-top: 30px;
+    background-color: #c70039; /* 원하는 색상 코드로 변경 */
+    color: white; /* 글자 색상 변경 */
+    border: none; /* 테두리 제거 (선택사항) */
+}
+
+.signup:hover {
+    background-color: #c70039; /* 마우스 오버 시 색상 변경 */
+}
+
+/*회원가입*/
+
+.signup-title {
+    font-size: 2rem; /* 원하는 크기로 설정 (예: 2rem, 24px 등) */
+    font-weight: bold; /* 글자를 굵게 설정 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+}
+
+.signup-container {
+    margin-left: 380px; /* 왼쪽 여백 */
+    margin-right: 380px; /* 오른쪽 여백 */
+}
+
+.signup-btn {
+    margin-top: 30px;
+    background-color: #c70039; /* 원하는 색상 코드로 변경 */
+    color: white; /* 글자 색상 변경 */
+    border: none; /* 테두리 제거 (선택사항) */
+}
+
+.signup:hover {
+    background-color: #c70039; /* 마우스 오버 시 색상 변경 */
+}
+
+
+
+/*이벤트 등록*/
+
+.event-register-title {
+    font-size: 2rem; /* 원하는 크기로 설정 (예: 2rem, 24px 등) */
+    font-weight: bold; /* 글자를 굵게 설정 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+}
+
+.event-register-container {
+    margin-left: 180px; /* 왼쪽 여백 */
+    margin-right: 180px; /* 오른쪽 여백 */
+}
+
+.event-register-btn {
+    margin-top: 30px;
+    background-color: #c70039; /* 원하는 색상 코드로 변경 */
+    color: white; /* 글자 색상 변경 */
+    border: none; /* 테두리 제거 (선택사항) */
+}
+
+.event-register:hover {
+    background-color: #c70039; /* 마우스 오버 시 색상 변경 */
+}
+
+/*이벤트 상세*/
+
+.event-detail-title {
+    font-size: 2rem; /* 원하는 크기로 설정 (예: 2rem, 24px 등) */
+    font-weight: bold; /* 글자를 굵게 설정 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+}
+
+.event-detail-container {
+    margin-left: 80px; /* 왼쪽 여백 */
+    margin-right: 80px; /* 오른쪽 여백 */
+}
+
+.event-header-img {
+    width: 250px; /* 원하는 너비 */
+    height: 350px; /* 원하는 높이 */
+    object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
+}

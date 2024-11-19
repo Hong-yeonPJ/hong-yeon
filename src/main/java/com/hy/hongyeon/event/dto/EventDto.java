@@ -23,6 +23,10 @@ public class EventDto {
 
     private EventCategory eventCategory;
 
+    @NotNull(message = "좌석수는 필수항목입니다.")
+    @Min(value = 0, message = "좌석은 0석 이상이어야 합니다.")
+    private int seatCapacity;
+
     @NotNull(message = "입장료는 필수항목입니다.")
     @Min(value = 0, message = "가격은 0 이상이어야 합니다.")
     private int entranceFee;
