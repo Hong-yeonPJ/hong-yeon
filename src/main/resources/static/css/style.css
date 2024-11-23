@@ -83,6 +83,21 @@
     object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
 }
 
+.event-detail-img {
+    margin-top: 20px; /* 원하는 크기로 조정 */
+}
+
+.go-event-list {
+    color: #000000; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 20px;
+    font-weight: semibold; /* 글자를 굵게 설정 */
+}
+
+.go-event-list:hover {
+    color: #e00000; /* 호버 시 글자 색 변경 (예: 빨간색) */
+}
+
 /*이벤트 목록*/
 
 .event-list {
