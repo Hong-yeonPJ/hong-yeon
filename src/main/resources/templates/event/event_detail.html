@@ -2,26 +2,40 @@
 <div layout:fragment="content" class="container my-5"> <!-- 상하 여백을 추가하기 위해 my-5 사용 -->
     <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
     <div class="event-detail-container">
-        <div class="border-bottom mb-4">
-            <h1 class="event-detail-title" th:text="${event.title}"></h1>
+        <div class="flex items-start bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="mb-3">
+                <label class="form-label"></label><br>
+                <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid event-header-img">
+            </div>
+
+            <div class="p-4 w-2/3">
+                <h1 class="text-2xl font-bold">
+                    <!--<span th:text="${event.eventCategory == 'PERFORMANCE' ? '공연' : (event.eventCategory == 'PUB' ? '주점' : (event.eventCategory == 'UNIVERSITY_EVENT' ? '행사' : '')))}"></span>-->
+                    <span th:text="${event.title}"></span>
+                </h1>
+
+                <div class="event-info">
+                    <p class="text-gray-600 mt-2 mb-2">장소: 계명아트센터</p>
+                    <p class="text-gray-600 mb-2">공연기간: 2025.01.11 ~ 2025.01.26</p>
+                    <p class="text-gray-600 mb-2">공연시간: 155분(인터미션 20분 포함)</p>
+                    <p class="text-gray-600 mb-2">관람연령: 초등학생 이상 관람가</p>
+                    <p class="text-gray-600 mb-2">가격: <span th:text="${event.entranceFee} + '원'"></span></p>
+                </div>
+
+
+
+                <div class="mt-14">
+                    <p class="text-gray-600 mb-2">잔여석 <!--<span th:text="${event.} + '석'"></span>--></p>
+                    <button class="bg-red-600 text-white px-4 py-2 rounded">예매하기</button>
+                </div>
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label"></label><br>
-            <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid event-header-img">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">입장료</label>
-            <p th:text="${event.entranceFee} + ' 원'"></p>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">상세정보 이미지</label><br>
+        <div class="mb-3 event-detail-img">
             <img th:src="@{${event.detail.path}}" alt="상세정보 이미지" class="img-fluid" style="max-width: 100%;">
         </div>
 
-        <a href="/" class="btn btn-primary">목록으로 돌아가기</a>
+        <a href="/" class="go-event-list">목록으로 돌아가기</a>
     </div>
 </div>
 
