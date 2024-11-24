@@ -73,6 +73,7 @@
 
 .event-header-img {
     margin-left: 30px;
+    margin-right: 20px;
     width: 250px; /* 원하는 너비 */
     height: 350px; /* 원하는 높이 */
     object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
@@ -83,7 +84,7 @@
 }
 
 .event-detail-img {
-    margin-top: 20px; /* 원하는 크기로 조정 */
+    margin-top: 50px; /* 원하는 크기로 조정 */
 }
 
 .go-event-list {
