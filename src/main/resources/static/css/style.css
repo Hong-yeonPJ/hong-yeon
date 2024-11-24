@@ -78,6 +78,10 @@
     object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
 }
 
+.event-info {
+    margin-top: 30px;
+}
+
 .event-detail-img {
     margin-top: 20px; /* 원하는 크기로 조정 */
 }
