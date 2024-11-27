@@ -1,0 +1,36 @@
+<html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org">
+<div layout:fragment="content" class="container my-5"> <!-- 상하 여백을 추가하기 위해 my-5 사용 -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
+    <div class="signup-container">
+        <div class="border-bottom mb-4">
+            <h4 class="signup-title">예매 정보 입력</h4>
+        </div>
+        <form th:action="@{/member/signup}" method="post">
+            <div th:replace="~{global/form_errors :: formErrorsFragment}"></div>
+            <div class="mb-3">
+                <label for="username" class="form-label">예매자명</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="아이디를 입력하세요">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">연락처</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호를 입력하세요">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">이메일</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="이메일을 입력하세요">
+            </div>
+            <div class="mb-3">
+                <label for="memberRole" class="form-label">예매 형식</label>
+                <select name="memberRole" id="memberRole" class="form-control">
+                    <option value="" disabled selected>선택하세요</option>
+                    <option value="MEMBER">일반 티켓</option>
+                    <option value="EVENT_HOST">대학생 티켓</option>
+                </select>
+            </div>
+
+
+            <button type="submit" class="btn signup-btn w-100">결제하기</button> <!-- 버튼을 전체 너비로 설정 -->
+        </form>
+    </div>
+</div>
+</html>

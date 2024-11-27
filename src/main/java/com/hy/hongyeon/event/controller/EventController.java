@@ -57,4 +57,29 @@ public class EventController {
 
         return "event/event_list";
     }
+
+    @GetMapping("/list/performance")
+    public String performanceList(Model model){
+        List<Event> performanceList = this.eventService.findPerformance();
+        model.addAttribute("eventList", performanceList);
+
+        return "event/event_list";
+    }
+
+    @GetMapping("/list/universityEvent")
+    public String universityEventList(Model model){
+        List<Event> universityEventList = this.eventService.findUniversityEvent();
+        model.addAttribute("eventList", universityEventList);
+
+        return "event/event_list";
+    }
+
+    @GetMapping("/list/pub")
+    public String pubList(Model model){
+        List<Event> pubList = this.eventService.findPub();
+        model.addAttribute("eventList", pubList);
+
+        return "event/event_list";
+    }
+
 }

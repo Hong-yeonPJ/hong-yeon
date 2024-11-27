@@ -6,6 +6,7 @@
     padding: 1rem; /* 패딩 */
     margin-top: 30px; /* 위쪽 여백 */
     margin-bottom: 10px; /* 아래쪽 여백 */
+    background-color: #e00000;
 }
 .carousel-item {
     display: flex; /* Flexbox 사용 */

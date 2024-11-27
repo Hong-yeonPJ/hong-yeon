@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
 
     <div class="container event-list">
-        <h1 class="text-2xl font-bold mb-6">공연 목록</h1>
+        <h1 class="text-2xl font-bold mb-6">목록</h1>
         <div class="grid grid-cols-4 gap-4">
             <div th:each="event : ${eventList}" class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <a th:href="@{/event/detail/{id}(id=${event.eventId})}" class="block">

@@ -2,6 +2,7 @@ package com.hy.hongyeon.event.service;
 
 import com.hy.hongyeon.event.dto.EventDto;
 import com.hy.hongyeon.event.entity.Event;
+import com.hy.hongyeon.event.entity.EventCategory;
 import com.hy.hongyeon.event.repository.EventRepository;
 import com.hy.hongyeon.global.exception.DataNotFoundException;
 import com.hy.hongyeon.global.image.entity.Image;
@@ -60,5 +61,17 @@ public class EventService {
 
     public List<Event> findAll(){
         return this.eventRepository.findAll();
+    }
+
+    public List<Event> findPerformance(){
+        return this.eventRepository.findAllByEventCategory(EventCategory.PERFORMANCE);
+    }
+
+    public List<Event> findUniversityEvent(){
+        return this.eventRepository.findAllByEventCategory(EventCategory.UNIVERSITY_EVENT);
+    }
+
+    public List<Event> findPub(){
+        return this.eventRepository.findAllByEventCategory(EventCategory.PUB);
     }
 }
