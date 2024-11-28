@@ -8,7 +8,7 @@
             <div th:each="event : ${eventList}" class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <a th:href="@{/event/detail/{id}(id=${event.eventId})}" class="block">
                     <div class="w-full h-48 overflow-hidden">
-                        <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="w-full h-full object-contain">
+                        <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="w-full h-full object-contain header-img">
                     </div>
                     <div class="p-4">
                         <h2 class="font-bold text-lg line-clamp-2" th:text="${event.title}"></h2>

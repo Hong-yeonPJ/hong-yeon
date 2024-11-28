@@ -10,26 +10,20 @@
 
             <div class="p-4 w-2/3">
                 <h1 class="text-2xl font-bold">
-                    <!--<span th:text="${event.eventCategory == 'PERFORMANCE' ? '공연' : (event.eventCategory == 'PUB' ? '주점' : (event.eventCategory == 'UNIVERSITY_EVENT' ? '행사' : '')))}"></span>-->
                     <span th:text="${event.title}"></span>
                 </h1>
 
                 <div class="event-info">
-                    <p class="text-gray-600 mt-2 mb-2">장소: 계명아트센터</p>
-                    <p class="text-gray-600 mb-2">공연기간: 2025.01.11 ~ 2025.01.26</p>
-                    <p class="text-gray-600 mb-2">공연시간: 155분(인터미션 20분 포함)</p>
-                    <p class="text-gray-600 mb-2">관람연령: 초등학생 이상 관람가</p>
+                    <p class="text-gray-600 mt-2 mb-2">장소: <span th:text="${event.location}"></span></p>
+                    <p class="text-gray-600 mb-2">날짜: <span th:text="${event.location}"></span></p>
                     <p class="text-gray-600 mb-2">가격: <span th:text="${event.entranceFee} + '원'"></span></p>
                 </div>
 
-
-
                 <div class="mt-14">
-                    <p class="text-gray-600 mb-2">잔여석 100<!--<span th:text="${event.} + '석'"></span>--></p>
+                    <p class="text-gray-600 mb-2">잔여석 <span th:text="${event.seatCapacity} + '석'"></span></p>
                     <a href="/event/event_reservation" class="bg-red-600 text-white px-4 py-2 rounded inline-block text-center">
                         예매하기
                     </a>
-                    <!--<button class="bg-red-600 text-white px-4 py-2 rounded">예매하기</button>-->
                 </div>
             </div>
         </div>

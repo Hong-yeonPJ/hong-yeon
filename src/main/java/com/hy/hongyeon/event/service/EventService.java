@@ -42,6 +42,8 @@ public class EventService {
                 seatCapacity(eventDto.getSeatCapacity()).
                 eventStatus(eventDto.getEventStatus()).
                 entranceFee(eventDto.getEntranceFee()).
+                location(eventDto.getLocation()).
+                date(eventDto.getDate()).
                 //eventOpenDate(eventDto.getEventOpenDate()).
                 header(header).
                 detail(detail).

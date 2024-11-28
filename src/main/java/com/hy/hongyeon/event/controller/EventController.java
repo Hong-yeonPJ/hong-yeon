@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -46,6 +47,11 @@ public class EventController {
     public String detail(Model model, @PathVariable("id") Long id) {
         Event event = this.eventService.getEvent(id);
         model.addAttribute("event", event);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+        String formattedDate = event.getDate().format(formatter); // eventDate를 포맷팅
+
+        model.addAttribute("formattedDate", formattedDate);
 
         return "event/event_detail";
     }
