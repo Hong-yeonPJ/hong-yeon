@@ -49,7 +49,7 @@ public class EventController {
         model.addAttribute("event", event);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd");
-        String formattedDate = event.getDate().format(formatter); // eventDate를 포맷팅
+        String formattedDate = event.getEventDate().format(formatter); // eventDate를 포맷팅
 
         model.addAttribute("formattedDate", formattedDate);
 

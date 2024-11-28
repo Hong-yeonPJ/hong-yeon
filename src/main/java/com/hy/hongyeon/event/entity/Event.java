@@ -43,7 +43,7 @@ public class Event {
 
     private LocalDateTime eventOpenDate;
 
-    private LocalDate date;
+    private LocalDate eventDate;
 
     private String location;
 

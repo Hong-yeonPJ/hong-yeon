@@ -43,7 +43,7 @@ public class EventService {
                 eventStatus(eventDto.getEventStatus()).
                 entranceFee(eventDto.getEntranceFee()).
                 location(eventDto.getLocation()).
-                date(eventDto.getDate()).
+                eventDate(eventDto.getEventDate()).
                 //eventOpenDate(eventDto.getEventOpenDate()).
                 header(header).
                 detail(detail).

@@ -26,7 +26,7 @@ public class EventDto {
     @NotEmpty(message = "장소는 필수항목입니다.")
     private String location;
 
-    private LocalDate date;
+    private LocalDate eventDate;
 
     private EventCategory eventCategory;
 

@@ -6350,3 +6350,93 @@ CREATE TABLE Event (
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-11-28 20:14:39.977130+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found; SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42102-224]
+2024-11-28 20:15:45.887058+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:15:46.200925+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:35.542796+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:36.327512+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:36.496047+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:36.663596+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:36.811517+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:36.954207+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:19:37.079101+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:20:10.441644+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:21:46.983930+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:26.418709+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:27.053940+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:27.222237+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:27.380708+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:27.525326+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:27.672754+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:38.309149+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:40.503504+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:41.341416+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:41.486196+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:58.411549+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:58.678485+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:58.823141+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:58.968271+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:59.127538+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:59.272051+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:59.443325+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-28 20:23:59.577255+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
+select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
