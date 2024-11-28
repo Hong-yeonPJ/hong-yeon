@@ -5,22 +5,26 @@
     <div class="text-end"> <!-- 오른쪽 정렬을 위한 클래스 -->
         <a href="/event/list" class="go-event-list">모든 행사 보기</a>
     </div>
-
-    <div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4">
-        <div class="carousel-item" th:each="event : ${eventList}">
-            <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
-                <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid">
-            </a>
+<!--
+    <div id="carousel" class="carousel slide carousel-center bg-neutral rounded-box max-w-md space-x-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" th:each="event, iterStat : ${eventList}" th:class="${iterStat.index == 0} ? 'active' : ''">
+                <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
+                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid d-block w-100">
+                </a>
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="visually-hidden">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="visually-hidden">Next</span>
         </a>
     </div>
+-->
+
 </div>
 
 </html>
