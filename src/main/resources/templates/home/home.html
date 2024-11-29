@@ -25,6 +25,18 @@
     </div>
 -->
 
+    <div class="container">
+        <div class="carousel">
+            <div class="cell" th:each="event, iterStat : ${eventList}">
+                <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
+                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid d-block w-100">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="prev-button">이전</div>
+    <div class="next-button">다음</div>
+
 </div>
 
 </html>
