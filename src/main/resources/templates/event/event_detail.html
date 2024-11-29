@@ -28,6 +28,28 @@
             </div>
         </div>
 
+        <div class="container mt-5">
+            <!-- 탭 헤더 -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">상세정보</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">장소정보</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">리뷰보기</a>
+                </li>
+            </ul>
+
+            <!-- 탭 콘텐츠 -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">상세정보 콘텐츠</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">장소정보 콘텐츠</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">리뷰 콘텐츠</div>
+            </div>
+        </div>
+
         <div class="mb-3 event-detail-img">
             <img th:src="@{${event.detail.path}}" alt="상세정보 이미지" class="img-fluid" style="max-width: 100%;">
         </div>

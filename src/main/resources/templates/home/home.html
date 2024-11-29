@@ -24,19 +24,34 @@
         </a>
     </div>
 -->
-
+<!--
     <div class="container">
         <div class="carousel">
             <div class="cell" th:each="event, iterStat : ${eventList}">
                 <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
-                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid d-block w-100">
+                    <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img d-block w-100">
                 </a>
             </div>
         </div>
     </div>
     <div class="prev-button">이전</div>
     <div class="next-button">다음</div>
-
+-->
+    <div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4">
+        <div class="carousel-item" th:each="event : ${eventList}">
+            <a th:href="@{/event/detail/{id}(id=${event.eventId})}">
+                <img th:src="@{${event.header.path}}" alt="헤더 이미지" class="img-fluid">
+            </a>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </div>
 
 </html>

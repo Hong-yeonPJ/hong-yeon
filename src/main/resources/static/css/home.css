@@ -1,5 +1,39 @@
+.img {
+    width: 370px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.container {
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 370px;
+    height: 500px;
+    overflow: hidden;
+}
 
 .carousell {
+    display: flex;
+    transition: all 0.5s;
+}
+
+.prev-button {
+    margin-left: 250px;
+}
+
+.prev-button,
+.next-button {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+
+
+.carousel {
     max-width: 600px; /* 캐러셀 최대 너비 설정 */
     margin: auto; /* 수평 중앙 정렬 */
     display: flex; /* Flexbox 사용 */
@@ -7,7 +41,7 @@
     padding: 1rem; /* 패딩 */
     margin-top: 30px; /* 위쪽 여백 */
     margin-bottom: 10px; /* 아래쪽 여백 */
-    /*background-color: #e00000;*/
+    background-color: #e00000;
 }
 .carousel-item {
     display: flex; /* Flexbox 사용 */
