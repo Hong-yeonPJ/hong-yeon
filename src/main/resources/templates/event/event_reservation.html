@@ -5,15 +5,15 @@
         <div class="border-bottom mb-4">
             <h4 class="signup-title">예매 정보 입력</h4>
         </div>
-        <form th:action="@{/member/signup}" method="post">
-            <div th:replace="~{global/form_errors :: formErrorsFragment}"></div>
+        <form th:action="@{/event/reservation}" method="post">
+            <!--<div th:replace="~{global/form_errors :: formErrorsFragment}"></div>-->
             <div class="mb-3">
                 <label for="username" class="form-label">예매자명</label>
-                <input type="text" name="username" id="username" class="form-control" placeholder="아이디를 입력하세요">
+                <input type="text" name="username" id="username" class="form-control" placeholder="예매자명을 입력하세요">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">연락처</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호를 입력하세요">
+                <input type="phoneNumber" name="password" id="password" class="form-control" placeholder="연락처를 입력하세요">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">이메일</label>
