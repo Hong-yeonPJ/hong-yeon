@@ -21,6 +21,9 @@
                 <li class="nav-item" sec:authorize="isAnonymous()">
                     <a class="nav-link" th:href="@{/member/signup}">회원가입</a>
                 </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <p><span th:text="${#authentication.principal.username}">사용자 이름</span>님</p>
+                </li>
             </ul>
         </div>
     </div>

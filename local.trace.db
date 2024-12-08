@@ -6440,3 +6440,18 @@ select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_
 2024-11-28 20:23:59.577255+09:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EVENT" not found (this database is empty); SQL statement:
 select e1_0.event_id,e1_0.create_date,e1_0.detail_image_id,e1_0.entrance_fee,e1_0.event_category,e1_0.event_date,e1_0.event_open_date,e1_0.event_status,e1_0.header_image_id,e1_0.location,e1_0.modify_date,e1_0.seat_capacity,e1_0.title,e1_0.writer_id from event e1_0 [42104-224]
+2024-11-29 10:09:45.855524+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from event where event_id=2"; expected "identifier"; SQL statement:
+delete * from event where event_id=2 [42001-224]
+2024-11-29 10:09:51.522819+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from event where event_id==2"; expected "identifier"; SQL statement:
+delete * from event where event_id==2 [42001-224]
+2024-11-29 10:10:01.060883+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from event where EVENT_ID=2"; expected "identifier"; SQL statement:
+delete * from event where EVENT_ID=2 [42001-224]
+2024-11-29 10:10:12.389800+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from event where EVENT_ID==2"; expected "identifier"; SQL statement:
+delete * from event where EVENT_ID==2 [42001-224]
+2024-11-29 10:10:12.745293+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from event where EVENT_ID==2"; expected "identifier"; SQL statement:
+delete * from event where EVENT_ID==2 [42001-224]
