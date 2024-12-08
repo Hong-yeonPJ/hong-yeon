@@ -1,4 +1,24 @@
-<html layout:decorate="~{global/layouts/layout}" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <!-- sbb CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Hong-yeon</title>
+</head>
+
+<body class="h-screen">
+<th:block th:replace="~{global/layouts/navbar :: navbar}"></th:block>  <!--상단바-->
+<th:block th:replace="~{global/layouts/navbar :: sub-navbar}"></th:block>  <!--상단 메뉴-->
+
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+
 <div layout:fragment="content" class="container my-5"> <!-- 상하 여백을 추가하기 위해 my-5 사용 -->
     <link rel="stylesheet" href="/css/style.css"> <!-- CSS 파일 연결 -->
     <div class="event-detail-container">
@@ -10,34 +30,77 @@
 
             <div class="p-4 w-2/3">
                 <h1 class="text-2xl font-bold">
-                    <!--<span th:text="${event.eventCategory == 'PERFORMANCE' ? '공연' : (event.eventCategory == 'PUB' ? '주점' : (event.eventCategory == 'UNIVERSITY_EVENT' ? '행사' : '')))}"></span>-->
                     <span th:text="${event.title}"></span>
                 </h1>
 
                 <div class="event-info">
-                    <p class="text-gray-600 mt-2 mb-2">장소: 계명아트센터</p>
-                    <p class="text-gray-600 mb-2">공연기간: 2025.01.11 ~ 2025.01.26</p>
-                    <p class="text-gray-600 mb-2">공연시간: 155분(인터미션 20분 포함)</p>
-                    <p class="text-gray-600 mb-2">관람연령: 초등학생 이상 관람가</p>
+                    <p class="text-gray-600 mt-2 mb-2">장소: <span th:text="${event.location}"></span></p>
+                    <p class="text-gray-600 mb-2">날짜: <span th:text="${event.eventDate}"></span></p>
                     <p class="text-gray-600 mb-2">가격: <span th:text="${event.entranceFee} + '원'"></span></p>
                 </div>
 
-
-
-                <div class="mt-14">
-                    <p class="text-gray-600 mb-2">잔여석 <!--<span th:text="${event.} + '석'"></span>--></p>
-                    <button class="bg-red-600 text-white px-4 py-2 rounded">예매하기</button>
+                <div class="reservation">
+                    <p class="text-gray-600 mb-2">잔여석 <span th:text="${event.seatCapacity} + '석'"></span></p>
+                    <a href="/event/reservation" class="bg-red-600 text-white px-4 py-2 rounded inline-block text-center">
+                        예매하기
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="mb-3 event-detail-img">
-            <img th:src="@{${event.detail.path}}" alt="상세정보 이미지" class="img-fluid" style="max-width: 100%;">
-        </div>
+        <div class="container mt-5">
+            <!-- 탭 헤더 -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="detail-tab" data-bs-toggle="tab" href="#detail" role="tab" aria-controls="detail" aria-selected="true">상세정보</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="location-tab" data-bs-toggle="tab" href="#location" role="tab" aria-controls="location" aria-selected="false">장소정보</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="review-tab" data-bs-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">리뷰보기</a>
+                </li>
+            </ul>
 
+            <!-- 탭 콘텐츠 -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                    <div class="mb-3 event-detail-img">
+                        <img th:src="@{${event.detail.path}}" alt="상세정보 이미지" class="img-fluid" style="max-width: 100%;">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab">
+                    <div class="location-map" id="map" style="width:500px;height:400px;"></div>
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=32b15842dbe5957fb0c0b65b1265632f"></script>
+                    <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                            center: new kakao.maps.LatLng(33.450701, 126.570667),
+                            level: 3
+                        };
+                        var map = new kakao.maps.Map(container, options);
+                    </script>
+                </div>
+                <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                    <!--<form th:action="@{|/answer/create/${question.id}|}" method="post">-->
+                        <textarea name="content" id="content" rows="5" class="review"></textarea>
+                        <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded inline-block text-center review-btn">
+                            리뷰 등록
+                        </button>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
         <a href="/" class="go-event-list">목록으로 돌아가기</a>
     </div>
 </div>
 
-</div>
+
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+<!-- Bootstrap JS -->
+<script th:src="@{/bootstrap.min.js}"></script>
+
+<th:block th:replace="~{global/layouts/footer :: footer}"></th:block> <!--하단바-->
+
+</body>
 </html>

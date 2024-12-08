@@ -79,15 +79,59 @@
     object-fit: cover; /* 비율에 맞춰 자르기 (선택사항) */
 }
 
+.reservation {
+    margin-top: 110px;
+}
+
 .event-info {
     margin-top: 30px;
+}
+
+.nav-link {
+    color: black; !important;/* 비활성화된 탭의 색상 */
+}
+
+.nav-link.active {
+    color: #e00000; !important; /* 활성화된 탭의 색상 */
+}
+
+.nav-link:hover {
+    color: #e00000; !important;/* 호버 시 색상 */
 }
 
 .event-detail-img {
     margin-top: 50px; /* 원하는 크기로 조정 */
 }
 
+.location-map {
+    margin-top: 50px;
+}
+
+.review {
+    width: 100%; /* 가로폭을 100%로 설정하여 부모 요소에 맞춤 */
+    max-width: 1000px; /* 최대 너비 설정 (원하는 너비로 조정 가능) */
+    height: auto; /* 자동 높이 조정 */
+    padding: 10px; /* 내부 여백 */
+    border: 2px solid #007bff; /* 테두리 색상 및 두께 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    font-size: 16px; /* 글자 크기 */
+    resize: vertical; /* 세로 방향만 조정 가능 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    margin-top: 30px;
+}
+
+.review:focus {
+    border-color: #0056b3; /* 포커스 시 테두리 색상 변경 */
+    outline: none; /* 기본 아웃라인 제거 */
+}
+
+.review-btn {
+    margin-left: auto; /* 버튼을 오른쪽으로 밀기 위해 사용 */
+}
+
 .go-event-list {
+    display: block; /* 블록 요소로 설정 */
+    margin-top: 70px; !important;
     color: #000000; /* 링크 색상 */
     text-decoration: none; /* 밑줄 제거 */
     margin-right: 20px;
@@ -102,4 +146,8 @@
 
 .event-list {
     margin: 50px;
+}
+
+.header-img {
+    margin-top: 10px;
 }

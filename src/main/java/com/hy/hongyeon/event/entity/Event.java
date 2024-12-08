@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -41,6 +42,10 @@ public class Event {
     private int entranceFee;
 
     private LocalDateTime eventOpenDate;
+
+    private LocalDate eventDate;
+
+    private String location;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private Image header;

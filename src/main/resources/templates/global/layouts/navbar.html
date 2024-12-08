@@ -18,8 +18,11 @@
                     <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/member/signin}">로그인</a>
                     <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/member/signout}">로그아웃</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" sec:authorize="isAnonymous()">
                     <a class="nav-link" th:href="@{/member/signup}">회원가입</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <p><span th:text="${#authentication.principal.username}">사용자 이름</span>님</p>
                 </li>
             </ul>
         </div>
@@ -30,9 +33,9 @@
 <div th:fragment="sub-navbar" class="sub-navbar">
     <div class="container-fluid">
         <ul class="sub-navbar-links">
-            <li class="sub-nav-item"><a class="sub-nav-link" href="#link1">공연</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-link" href="#link2">학교 행사</a></li>
-            <li class="sub-nav-item"><a class="sub-nav-link" href="#link3">주점</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-link" th:href="@{/event/list/performance}">공연</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-link" th:href="@{/event/list/universityEvent}">행사</a></li>
+            <li class="sub-nav-item"><a class="sub-nav-link" th:href="@{/event/list/pub}">주점</a></li>
         </ul>
     </div>
 </div>

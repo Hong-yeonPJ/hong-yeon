@@ -7,14 +7,14 @@ spring:
       path: /h2-console
   datasource:
     url: jdbc:h2:file:./local
-    driverClassName: org.h2.Driver
+    driver-class-name: org.h2.Driver
     username: sa
     password: ""
   jpa:
-    properties:
+    hibernate:
+      ddl-auto: update
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
-        ddl-auto: update
   servlet:
     multipart:
       max-file-size: 10MB
