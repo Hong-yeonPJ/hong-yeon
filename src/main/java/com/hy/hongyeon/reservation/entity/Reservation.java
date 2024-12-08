@@ -13,5 +13,4 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ReservationId;
 
-    //private String;
 }
